@@ -1,0 +1,140 @@
+*{margin: 0; padding: 0; font-size: 100%; border: none; outline: none; font-weight: 300; box-sizing: border-box; font-family: 'Raleway', sans-serif; }
+a {text-decoration: none;}
+ul {list-style: none;}
+img {max-width: 100%;}
+/* CABEÇALHO */
+.cabecalho {width: 100%; height: 56px; float: left; padding: 3% 4%; position: fixed; background-color: #fbca04; z-index: 1;}
+.logo {width: 56px; height: 56px; float: left; font-size: 30px; font-weight: 100; color: #5b9bd5;}
+#btn-menu {display: none;}
+.icon-menu {width: 56px; height: 47px; float: right; text-align: center; color: #f5f5f5; background: none; cursor: pointer;}
+/* MENU */
+.menu { display:block; width: 100%; height: 100%; position: fixed; background-color: rgba(0,0,0,0.9); top: 56px; right: 0; transform: translateX(-100%); transition: all 0.3s}
+.menu ul {width: 100%; float: left; text-align: center; margin-top: 5%;}
+.menu li {padding: 1.5%;}
+.menu li a {font-size: 2em; color: #fff; padding: 1.5% 3%;}
+.menu li a:hover {border: 1px solid #4990cd;}
+#btn-menu:checked ~ .menu {transform: translateX(0%);}
+/* BANNER */
+#banner{text-align: center; padding: 25% 4%; width: 100%; background:url(../images/fundo01.jpg) center center no-repeat fixed; -moz-background-size: 100% 100%; -webkit-background-size: 100% 100%; background-size: 100% 100%;}
+#banner h2 {width: 100%; height: 200px; background: url(../images/logo.png) center center no-repeat; font-size: 0;}
+.title h3 {font-family: 'Verdana', sans-serif; font-weight: bold; font-size: 2em; color: #fff;}
+.title h4 {color: #fff; font-size: 1.2em; margin-top: 2%;}
+.buttons {margin-top: 7%;}
+.btn-saiba {padding: 10px; font-size: 1.5em; color: #fff; background-color: #fbca04; border-radius: 4px; cursor: pointer;}
+/* RESUMOS */
+.conteudo {width: 100%; float: left; background-color: #fff;}
+.resumo {width: 100%; text-align: center; margin-top: 5%;}
+.resumo h2 strong {font-size: .8em; color: #130400; font-weight: 700; border-bottom: 1px solid #6ba4d5}
+.resumo img {margin-top: 10%;}
+.resumo p {font-size: .8em; color: #130400; font-weight: 600;}
+/* SERVIÇOS */
+.servicos {width: 100%; float: left; padding: 3% 4%; text-align: center; margin-top: 5%; background-color: #f4f4f4;}
+.servicos h2 strong {font-weight: 700; color: #130400; border-bottom: 1px solid #6ba4d5}
+.servicos h3 {margin-top: 3%;}
+.servicos h3 strong {font-weight: 700;}
+/* SOCIAL LISTENING */
+.sociais {width: 100%; float: left; padding: 3% 4%; margin-top: 5%; text-align: center;}
+.sociais h2 strong {font-weight: 700; color: #130400; border-bottom: 1px solid #6ba4d5;}
+.sociais .imagens {text-align: left; margin-top: 5%;}
+.imagens img {margin-bottom: 3%;}
+/* GESTÃO DA CLIENTELA: ; */
+.gestao {width: 100%; float: left; padding: 3% 4%; text-align: center; margin-top: 5%; background-color: #f4f4f4;}
+.gestao h2 strong {font-weight: 700; color: #130400; border-bottom: 1px solid #6ba4d5}
+.gestao h3 {font-size: .8em; font-weight: 700; color: #5a5c5c; margin-top: 3%;}
+.imagens-g img {margin-top: 5%;}
+.grafico2, .grafico3 {display: none}
+/* CONTATO */
+.contato {width: 100%; float: left; padding: 3% 4%; background: #5b9bd5; text-align: center;}
+.contato h2 strong {font-weight: 700; color: #fff; border-bottom: 1px solid #fff}
+.contato h3 {font-weight: 700; color: #fbca04; margin-top: 3%;}
+.contato p {color: #fff;}
+.contato form {text-align: left; margin-top: 3%;}
+.contato form input { width: 100%; height: 25px; border-radius: 3px;}
+.contato form textarea {width: 100%; border-radius: 3px;}
+.contato form .submit {width: 20%; border-radius: 3px; height: 40px; background: #fbca04; color: #fff;  -webkit-appearance: none;}
+/* RODAPE */
+.rodape {width: 100%; float: left; padding: 3% 4%; text-align: center;}
+.social-icons a {font-size: 1.5em; color: rgba(25,25,25,0.7); margin-right: 3%; }
+.social-icons a:last-child {margin-right: 0;}
+.social-icons a:hover {color: rgb(91,155,213);}
+/* ====== MOBILE FIRST ====== */
+/* SMALL DEVICES - SMARTPHONES */
+@media screen and (min-width: 480px) {
+/* BANNER */
+.resumo h2 strong {font-size: 1.2em;}
+.servicos h2 strong {font-size: 1.2em;}
+.sociais h2 strong {font-size: 1.2em;}
+.gestao h2 strong {font-size: 1.2em;}
+.contato h2 strong {font-size: 1.5em;}
+}
+/* SMALL DEVICES - MEDIUM SMARTPHONES */
+@media screen and (min-width: 640px) {
+/* CABECALHO */
+.cabecalho {height: 80px;}
+/* MENU */
+.menu {top: 80px;}
+/* SOCIAL LISTENING */
+.sociais .imagens {display: flex; flex-wrap: wrap; justify-content: space-between;}
+/* CONTATO */
+.contato form input {width: 70%;}
+.contato form textarea {width: 70%}
+/* FOOTER */
+.social-icons a {font-size: 2em;}
+}
+/* SMALL DEVICES - TABLETS */
+@media screen and (min-width: 768px) {
+/* CABECALHO */
+.logo {font-size: 45px; line-height: 36px;}
+/* SERVIÇOS */
+.imagens-servicos {margin-top: 5%; display: flex; flex-wrap: wrap; justify-content: center;}
+/* GESTÃO DA CLIENTELA: ; */
+.imagens-g {display: flex; flex-wrap: wrap; justify-content: center;}
+.grafico2 {display: flex;}
+.imagens-g img {margin-right: 1%}
+.imagens-g img:last-child {margin-right: 0;}
+}
+/* SMALL DEVICES - BIG TABLETS */
+@media screen and (min-width: 1024px) {
+/* CABECALHO */
+.cabecalho {height: 130px;}
+/* MENU */
+.menu {top: 130px;}
+/* BANNER */
+#banner{padding: 15% 4%;}
+.title h3 {font-size: 2.5em;}
+.title h4 {font-size: 1.5em;}
+/* RESUMOS */
+.resumo h2 strong {font-size: 1.5em;}
+.imagens-resumo {margin-top: 5%; display: flex; flex-wrap: wrap; justify-content: center;}
+.imagens-resumo img {margin-left: 22px; margin-right: 10px; position: relative; top: -70px;}
+.imagens-resumo p {width: 228px; margin-top: 6%}
+/* SERVICOS */
+.servicos h2 strong {font-size: 1.5em;}
+/* SOCIAL */
+.sociais h2 strong {font-size: 1.5em;}
+/* GESTAO */
+.gestao h2 strong {font-size: 1.5em;}
+.gestao h3 {font-size: 1.1em;}
+.sociais .imagens {justify-content: space-around;}
+.grafico3 {display: flex;}
+/* CONTATO */
+.contato h2 strong {font-size: 2em;}
+.contato h3 {font-size: 2em;}
+.contato p {font-size: 1.2em;}
+}
+/* LARGE DEVICES - WIDE SCREENS */
+@media screen and (min-width: 1280px) {
+/* CABEÇALHO */	
+.logo {line-height: 56px;}
+.icon-menu {display: none;}
+.btn-close {display: none}
+/* MENU */
+.menu {width: auto; height: 56px; line-height: 56px; float: right; display: block !important; position: static; background: none; transform: translateX(0%);}
+.menu ul {margin-top: 0;}
+.menu li {padding: 0; float: left;}
+.menu li a {color: #215480; font-size: 1em; padding: 15px;}
+.menu li a:hover {border: none; color: #f5f5f5;}
+/* CONTATO */
+.contato form input {width: 50%;}
+.contato form textarea {width: 50%}
+}
