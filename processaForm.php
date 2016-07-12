@@ -1,6 +1,6 @@
 ﻿<?php
 	// INFORMAÇÕES DO REGISTRO
-	$para= "caiodecarvalho@wheke.net";
+	$para= "contato@wheke.net";
 	$nome= $_REQUEST['nome'];
 	$assunto= $_REQUEST['assunto'];
 	$email= $_REQUEST['email'];

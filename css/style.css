@@ -2,6 +2,7 @@
 a {text-decoration: none;}
 ul {list-style: none;}
 img {max-width: 100%;}
+.mini-text {font-size: .8em; font-weight: 700; color: #5a5c5c; margin-top: 3%;}
 /* CABEÇALHO */
 .cabecalho {width: 100%; height: 56px; float: left; padding: 3% 4%; position: fixed; background-color: #fbca04; z-index: 1;}
 .logo {width: 56px; height: 56px; float: left; font-size: 30px; font-weight: 100; color: #5b9bd5;}
@@ -16,35 +17,47 @@ img {max-width: 100%;}
 #btn-menu:checked ~ .menu {transform: translateX(0%);}
 /* BANNER */
 #banner{text-align: center; padding: 25% 4%; width: 100%; background:url(../images/fundo01.jpg) center center no-repeat fixed; -moz-background-size: 100% 100%; -webkit-background-size: 100% 100%; background-size: 100% 100%;}
-#banner h2 {width: 100%; height: 200px; background: url(../images/logo.png) center center no-repeat; font-size: 0;}
+#banner h2 {max-width:464px; width: 100%; height: 200px; min-height: auto; margin: 0 auto; background: url(../images/logo.png) center center no-repeat; font-size: 0; background-size: 100%;}
 .title h3 {font-family: 'Verdana', sans-serif; font-weight: bold; font-size: 2em; color: #fff;}
 .title h4 {color: #fff; font-size: 1.2em; margin-top: 2%;}
 .buttons {margin-top: 7%;}
 .btn-saiba {padding: 10px; font-size: 1.5em; color: #fff; background-color: #fbca04; border-radius: 4px; cursor: pointer;}
 /* RESUMOS */
 .conteudo {width: 100%; float: left; background-color: #fff;}
-.resumo {width: 100%; text-align: center; margin-top: 5%;}
+.resumo {width: 100%; text-align: center; padding: 15% 4%;}
 .resumo h2 strong {font-size: .8em; color: #130400; font-weight: 700; border-bottom: 1px solid #6ba4d5}
-.resumo img {margin-top: 10%;}
+.imagens-resumo img {margin-top: 10%;}
+.imagens-resumo2 {display: none;}
 .resumo p {font-size: .8em; color: #130400; font-weight: 600;}
 /* SERVIÇOS */
-.servicos {width: 100%; float: left; padding: 3% 4%; text-align: center; margin-top: 5%; background-color: #f4f4f4;}
+.servicos {width: 100%; float: left; padding: 15% 4%; text-align: center; background-color: #f4f4f4;}
 .servicos h2 strong {font-weight: 700; color: #130400; border-bottom: 1px solid #6ba4d5}
-.servicos h3 {margin-top: 3%;}
-.servicos h3 strong {font-weight: 700;}
+/* DIFERENCIAL */
+.diferencial {width: 100%; float: left; padding: 15% 4%; text-align: center; background-color: #ffcc00;}
+.diferencial h2 strong {color: #130400; font-weight: 700; border-bottom: 1px solid #130400}
+.diferencial img, .imagens-diferencial {margin-top: 10%}
+.diferencial .imagens-flex {display: flex; justify-content: space-around; align-items: center;}
+.mais {font-size: 5em;}
+/* IMPACTO */
+.impacto {width: 100%; float: left; padding: 15% 4%; text-align: center; background-color: #6699ff;}
+.impacto h2 strong {color: #fff; font-weight: 700; border-bottom: 1px solid #fff}
+.conj-impacto {display: flex; justify-content: center;}
+.imagens-impacto {display: flex; flex-direction: column;}
+.imagens-impacto img {margin-top: 58%;}
+.text-impacto {color: #fff; text-align: left;}
+.text-impacto p {margin: 21% 4% 4% 5%; font-size: .8em;}
 /* SOCIAL LISTENING */
-.sociais {width: 100%; float: left; padding: 3% 4%; margin-top: 5%; text-align: center;}
+.sociais {width: 100%; float: left; padding: 15% 4%; text-align: center;}
 .sociais h2 strong {font-weight: 700; color: #130400; border-bottom: 1px solid #6ba4d5;}
 .sociais .imagens {text-align: left; margin-top: 5%;}
-.imagens img {margin-bottom: 3%;}
+.imagens img {margin-bottom: 7%;}
 /* GESTÃO DA CLIENTELA: ; */
-.gestao {width: 100%; float: left; padding: 3% 4%; text-align: center; margin-top: 5%; background-color: #f4f4f4;}
+.gestao {width: 100%; float: left; padding: 15% 4%; text-align: center; margin-top: 5%; background-color: #f4f4f4;}
 .gestao h2 strong {font-weight: 700; color: #130400; border-bottom: 1px solid #6ba4d5}
-.gestao h3 {font-size: .8em; font-weight: 700; color: #5a5c5c; margin-top: 3%;}
 .imagens-g img {margin-top: 5%;}
 .grafico2, .grafico3 {display: none}
 /* CONTATO */
-.contato {width: 100%; float: left; padding: 3% 4%; background: #5b9bd5; text-align: center;}
+.contato {width: 100%; float: left; padding: 15% 4%; background: #5b9bd5; text-align: center;}
 .contato h2 strong {font-weight: 700; color: #fff; border-bottom: 1px solid #fff}
 .contato h3 {font-weight: 700; color: #fbca04; margin-top: 3%;}
 .contato p {color: #fff;}
@@ -61,11 +74,10 @@ img {max-width: 100%;}
 /* SMALL DEVICES - SMARTPHONES */
 @media screen and (min-width: 480px) {
 /* BANNER */
-.resumo h2 strong {font-size: 1.2em;}
-.servicos h2 strong {font-size: 1.2em;}
-.sociais h2 strong {font-size: 1.2em;}
-.gestao h2 strong {font-size: 1.2em;}
+.resumo h2 strong,.servicos h2 strong,.sociais h2 strong,.gestao h2 strong,.diferencial h2 strong,.impacto h2 strong  {font-size: 1.2em;}
 .contato h2 strong {font-size: 1.5em;}
+/* IMPACTO:  */
+.text-impacto p {margin: 16% 5% 5% 5%; font-size: 1em;}
 }
 /* SMALL DEVICES - MEDIUM SMARTPHONES */
 @media screen and (min-width: 640px) {
@@ -74,7 +86,7 @@ img {max-width: 100%;}
 /* MENU */
 .menu {top: 80px;}
 /* SOCIAL LISTENING */
-.sociais .imagens {display: flex; flex-wrap: wrap; justify-content: space-between;}
+.sociais .imagens {display: flex; justify-content: space-around;}
 /* CONTATO */
 .contato form input {width: 70%;}
 .contato form textarea {width: 70%}
@@ -105,17 +117,24 @@ img {max-width: 100%;}
 .title h4 {font-size: 1.5em;}
 /* RESUMOS */
 .resumo h2 strong {font-size: 1.5em;}
-.imagens-resumo {margin-top: 5%; display: flex; flex-wrap: wrap; justify-content: center;}
-.imagens-resumo img {margin-left: 22px; margin-right: 10px; position: relative; top: -70px;}
-.imagens-resumo p {width: 228px; margin-top: 6%}
+.imagens-resumo {display: none;}
+.imagens-resumo2 {display: flex; justify-content: space-around; align-items: center; margin-top: 5%}
+.par-imagens, .par-imagens2 {display: flex; flex-direction: column;}
+.par-resumo p {padding: 8%; font-size: .9em;}
 /* SERVICOS */
 .servicos h2 strong {font-size: 1.5em;}
+/* DIFERENCIAL */
+.imagens-flex {margin-top: 5%;}
+.diferencial img {margin-top: 0;}
+.imagens-diferencial {display: flex; margin-top: 0;}
+.diferencial h2 strong,.impacto h2 strong {font-size: 1.5em;}
 /* SOCIAL */
 .sociais h2 strong {font-size: 1.5em;}
+.gp-1{display: flex; flex-direction: column;}
 /* GESTAO */
 .gestao h2 strong {font-size: 1.5em;}
-.gestao h3 {font-size: 1.1em;}
-.sociais .imagens {justify-content: space-around;}
+.mini-text {font-size: 1.1em;}
+.sociais .imagens {}
 .grafico3 {display: flex;}
 /* CONTATO */
 .contato h2 strong {font-size: 2em;}
@@ -134,6 +153,11 @@ img {max-width: 100%;}
 .menu li {padding: 0; float: left;}
 .menu li a {color: #215480; font-size: 1em; padding: 15px;}
 .menu li a:hover {border: none; color: #f5f5f5;}
+/* RESUMO */
+.par-resumo p {padding: 12%;}
+/* DIFERENCIAL */
+.imagens-flex {padding: 5%;}
+.imagens-diferencial2 {display: flex;}
 /* CONTATO */
 .contato form input {width: 50%;}
 .contato form textarea {width: 50%}
